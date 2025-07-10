@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* globals.css */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+
+
+/* Make WhatsApp icon bigger */
+#whatsapp-chat-widget .wh-widget-send-button {
+  transform: scale(1.4);
+  transform-origin: bottom right;
+}
+
+
+#whatsapp-chat-widget .wh-widget-send-button {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1.4);
+  }
+  50% {
+    transform: scale(1.6);
+  }
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@import "swiper/css";
+
+/* globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes blob-bounce {
+    0%, 100% {
+      transform: translate(-50%, -50%) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: translate(-50%, -50%) translate3d(60%, 0, 0);
+    }
+    50% {
+      transform: translate(-50%, -50%) translate3d(60%, 60%, 0);
+    }
+    75% {
+      transform: translate(-50%, -50%) translate3d(0, 60%, 0);
+    }
+  }
+
+  .animate-blob {
+    animation: blob-bounce 5s infinite ease-in-out;
+  }
+}
+
+@layer utilities {
+  @keyframes blob-bounce {
+    0%, 100% {
+      transform: translate(-50%, -50%) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: translate(-50%, -50%) translate3d(60%, 0, 0);
+    }
+    50% {
+      transform: translate(-50%, -50%) translate3d(60%, 60%, 0);
+    }
+    75% {
+      transform: translate(-50%, -50%) translate3d(0, 60%, 0);
+    }
+  }
+
+  .animate-blob {
+    animation: blob-bounce 5s infinite ease-in-out;
+  }
+}
