@@ -113,14 +113,14 @@ export default function ContactPage() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
-      details: ["hello@devshiping.com", "support@devshiping.com"],
+      details: ["devshiping@gmail.com", "support.devshiping@gmail.com"],
       description: "Send us an email anytime",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Call Us",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
-      description: "Mon-Fri from 8am to 6pm",
+      details: ["+91 9643570809", "+91 6299697165"],
+      description: "Call us at any time",
     },
   ]
 
@@ -376,7 +376,7 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                        className="w-full pl-10 pr-4 py-3 text-gray-700 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                         style={{
                           backgroundColor: "rgba(255, 255, 255, 0.9)",
                           backdropFilter: "blur(10px)",
@@ -399,7 +399,7 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                        className="w-full pl-10 pr-4 py-3 text-gray-700 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                         style={{
                           backgroundColor: "rgba(255, 255, 255, 0.9)",
                           backdropFilter: "blur(10px)",
@@ -422,7 +422,7 @@ export default function ContactPage() {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                       style={{
                         backgroundColor: "rgba(255, 255, 255, 0.9)",
                         backdropFilter: "blur(10px)",
@@ -443,12 +443,12 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                        className="w-full pl-10 pr-4 py-3 text-gray-700 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                         style={{
                           backgroundColor: "rgba(255, 255, 255, 0.9)",
                           backdropFilter: "blur(10px)",
                         }}
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+91 12345 67890"
                       />
                     </div>
                   </div>
@@ -464,7 +464,7 @@ export default function ContactPage() {
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                     style={{
                       backgroundColor: "rgba(255, 255, 255, 0.9)",
                       backdropFilter: "blur(10px)",
@@ -493,7 +493,7 @@ export default function ContactPage() {
                       rows={6}
                       value={formData.message}
                       onChange={handleInputChange}
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 resize-none"
+                      className="w-full pl-10 pr-4 py-3 text-gray-700 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 resize-none"
                       style={{
                         backgroundColor: "rgba(255, 255, 255, 0.9)",
                         backdropFilter: "blur(10px)",
