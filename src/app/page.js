@@ -13,9 +13,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import DesignProcess from "@/components/DesignProcess";
-import BusinessSetupSteps from "@/components/BusinessSetupSteps";
 import ServicesSlider from "@/components/ServicesSlider";
 import FaqSection from "@/components/faqSection";
+import DevelopmentProcess from "@/components/DevelopmentProcess";
 
 export default function HomePage() {
   
@@ -576,7 +576,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <BusinessSetupSteps/>
+      <DevelopmentProcess/>
+
       <section id="contact" className="py-20 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div
@@ -640,8 +641,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <DesignProcess/>
+      
+      {/* FAQ Section */}
       <FaqSection/>
 
       {/* Custom Styles */}
