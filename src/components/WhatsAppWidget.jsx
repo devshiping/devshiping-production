@@ -91,8 +91,8 @@ const WhatsAppWidget = () => {
             <div
               className="p-4 text-white relative overflow-hidden"
               style={{
-                background: "linear-gradient(135deg, #25D366, #128C7E)",
-              }}
+              background: "linear-gradient(135deg, #8b5cf6, #06b6d4)",
+            }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 animate-pulse" />
               <div className="flex items-center justify-between relative z-10">
@@ -129,12 +129,12 @@ const WhatsAppWidget = () => {
 
               {/* Quick Messages */}
               <div className="space-y-2 mb-4">
-                <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">Quick Messages</p>
+                <p className="text-xs font-medium text-gray-700 uppercase tracking-wide">Quick Messages</p>
                 {quickMessages.map((message, index) => (
                   <button
                     key={index}
                     onClick={() => handleQuickMessage(message)}
-                    className="w-full text-left p-3 text-sm bg-gray-50 hover:bg-gray-100 rounded-xl transition-colors duration-200 border border-transparent hover:border-green-200"
+                    className="w-full text-left p-3 text-gray-700 text-sm bg-gray-50 hover:bg-gray-100 rounded-xl transition-colors duration-200 border border-transparent hover:border-green-200"
                   >
                     {message}
                   </button>
@@ -143,13 +143,13 @@ const WhatsAppWidget = () => {
 
               {/* Custom Message Section */}
               <div className="border-t pt-4">
-                <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-3">Custom Message</p>
+                <p className="text-xs font-medium text-gray-700 uppercase tracking-wide mb-3">Custom Message</p>
 
                 {/* Service Selection */}
                 <select
                   value={selectedService}
                   onChange={(e) => setSelectedService(e.target.value)}
-                  className="w-full p-3 border border-gray-200 rounded-xl mb-3 text-sm focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full p-3 text-gray-700 border border-gray-200 rounded-xl mb-3 text-sm focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 >
                   <option value="">Select a service (optional)</option>
                   {services.map((service, index) => (
@@ -164,7 +164,7 @@ const WhatsAppWidget = () => {
                   value={customMessage}
                   onChange={(e) => setCustomMessage(e.target.value)}
                   placeholder="Type your message here..."
-                  className="w-full p-3 border border-gray-200 rounded-xl text-sm resize-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full p-3 text-gray-700 border border-gray-200 rounded-xl text-sm resize-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   rows={3}
                 />
 
@@ -195,7 +195,11 @@ const WhatsAppWidget = () => {
         {/* Floating Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-14 h-14 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center relative overflow-hidden group"
+          className="w-14 h-14 cursor-pointer text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center relative overflow-hidden group"
+          style={{
+              background: "linear-gradient(135deg, #8b5cf6, #06b6d4)",
+              boxShadow: "0 4px 15px rgba(139, 92, 246, 0.4)",
+            }}
         >
           {/* Pulse Animation */}
           <div className="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-20" />
@@ -210,7 +214,7 @@ const WhatsAppWidget = () => {
 
           {/* Notification Badge */}
           {!isOpen && (
-            <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
+            <div className="absolute -top-1 -right-1 w-4 h-4  rounded-full flex items-center justify-center">
               <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
             </div>
           )}
