@@ -16,7 +16,6 @@ import DesignProcess from "@/components/DesignProcess";
 import BusinessSetupSteps from "@/components/BusinessSetupSteps";
 import ServicesSlider from "@/components/ServicesSlider";
 import FaqSection from "@/components/faqSection";
-import Footer from "@/components/Footer";
 
 export default function HomePage() {
   
@@ -300,7 +299,7 @@ export default function HomePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button
+              <Link href="/contact"
                 className="px-8 py-4 text-lg text-white rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center gap-2 relative overflow-hidden group"
                 style={{
                   background: "linear-gradient(135deg, #8b5cf6, #06b6d4)",
@@ -310,8 +309,8 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 Start Your Project
                 <ArrowRight className="w-5 h-5" />
-              </button>
-              <button
+              </Link>
+              <Link href="/portfolio"
                 className="px-8 py-4 text-lg text-gray-700 rounded-xl font-medium transition-all duration-300 hover:scale-105 border-2 hover:shadow-xl relative overflow-hidden group"
                 style={{
                   borderColor: "rgba(139, 92, 246, 0.3)",
@@ -320,7 +319,7 @@ export default function HomePage() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                 View Our Work
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -607,7 +606,7 @@ export default function HomePage() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5" />
             <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-              <button
+              <Link href="/contact"
                 className="px-8 py-3 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl"
                 style={{
                   background: "linear-gradient(135deg, #8b5cf6, #06b6d4)",
@@ -615,8 +614,8 @@ export default function HomePage() {
                 }}
               >
                 Start a Project
-              </button>
-              <button
+              </Link>
+              <Link href="/contact"
                 className="px-8 py-3 text-gray-700 rounded-xl font-medium transition-all duration-300 hover:scale-105 border-2 hover:shadow-xl"
                 style={{
                   borderColor: "rgba(139, 92, 246, 0.3)",
@@ -624,7 +623,7 @@ export default function HomePage() {
                 }}
               >
                 Schedule a Call
-              </button>
+              </Link>
             </div>
 
             <div

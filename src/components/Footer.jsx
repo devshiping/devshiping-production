@@ -1,7 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
-import { FaInstagram, FaLinkedinIn, FaFacebookF, FaYoutube } from 'react-icons/fa';
-import { GeistSans } from "next/font/google";
+import Link from "next/link"
+import { FaInstagram, FaLinkedinIn, FaFacebookF, FaYoutube } from "react-icons/fa"
 
 const Footer = () => {
   return (
@@ -12,14 +10,16 @@ const Footer = () => {
           {/* Logo & CTA */}
           <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
             <Link href="/" className="flex justify-center lg:justify-start">
-              <img src="/logo.svg" alt="Logo" className="w-40 h-10 object-contain" />
+              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                Devshiping
+              </span>
             </Link>
             <p className="py-6 text-sm text-gray-500 text-center lg:text-left lg:max-w-xs">
-              Trusted by 5M+ users in 100+ countries. Have any query?
+              Building the future, one line of code at a time. Have any query?
             </p>
             <Link
               href="/contact"
-              className="block w-fit mx-auto lg:mx-0 px-5 py-2.5 text-xs text-white bg-indigo-600 rounded-full hover:bg-indigo-700 transition-all"
+              className="block w-fit mx-auto lg:mx-0 px-5 py-2.5 text-xs text-white bg-gradient-to-r from-purple-600 to-blue-600 rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:scale-105"
             >
               Contact Us
             </Link>
@@ -55,17 +55,54 @@ const Footer = () => {
 
           {/* Navigation Columns */}
           {[
-            { title: 'Pagedone', links: ['Home', 'About', 'Pricing', 'Features'] },
-            { title: 'Products', links: ['Figma UI System', 'Icons Assets', 'Responsive Blocks', 'Components Library'] },
-            { title: 'Resources', links: ['FAQs', 'Quick Start', 'Documentation', 'User Guide'] },
-            { title: 'Blogs', links: ['News', 'Tips & Tricks', 'New Updates', 'Events'] },
+            {
+              title: "Company",
+              links: [
+                { name: "Home", href: "/" },
+                { name: "About", href: "/about" },
+                { name: "Services", href: "/services" },
+                { name: "Contact", href: "/contact" },
+              ],
+            },
+            {
+              title: "Services",
+              links: [
+                { name: "Web Development", href: "/services" },
+                { name: "Mobile Apps", href: "/services" },
+                { name: "E-commerce", href: "/services" },
+                { name: "UI/UX Design", href: "/services" },
+              ],
+            },
+            {
+              title: "Resources",
+              links: [
+                { name: "Portfolio", href: "#portfolio" },
+                { name: "Blog", href: "#" },
+                { name: "Documentation", href: "#" },
+                { name: "Support", href: "/contact" },
+              ],
+            },
+            {
+              title: "Legal",
+              links: [
+                { name: "Privacy Policy", href: "#" },
+                { name: "Terms of Service", href: "#" },
+                { name: "Cookie Policy", href: "#" },
+                { name: "Refund Policy", href: "#" },
+              ],
+            },
           ].map((section, idx) => (
             <div key={idx} className="lg:mx-auto text-left">
               <h4 className="text-lg font-medium text-gray-900 mb-6">{section.title}</h4>
               <ul className="text-sm space-y-4">
                 {section.links.map((link, i) => (
                   <li key={i}>
-                    <Link href="#" className="text-gray-600 hover:text-gray-900">{link}</Link>
+                    <Link
+                      href={link.href}
+                      className="text-gray-600 hover:text-purple-600 transition-colors duration-200"
+                    >
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -77,11 +114,17 @@ const Footer = () => {
         <div className="py-6 border-t border-gray-200">
           <div className="flex flex-col items-center justify-center lg:justify-between lg:flex-row">
             <span className="text-sm text-gray-500 text-center lg:text-left">
-              © <Link href="/" className="hover:underline">Devshiping</Link> {new Date().getFullYear()}. All rights reserved.
+              ©{" "}
+              <Link href="/" className="hover:underline text-purple-600 font-medium">
+                Devshiping
+              </Link>{" "}
+              {new Date().getFullYear()}. All rights reserved.
             </span>
           </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
+
+export default Footer
